@@ -1,6 +1,6 @@
 #include <iostream>
-//#include "Female.h"
-
+#include "Female.h"
+#include "Male.h"
 
 #include <vector>
 #include <time.h>

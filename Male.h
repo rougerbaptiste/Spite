@@ -1,19 +1,19 @@
-#ifndef DEF_FEMALE
-#define DEF_FEMALE
+#ifndef DEF_MALE
+#define DEF_MALE
 
 #include <iostream>
 #include <string>
 
-class Female
+class Male
 {
 
  public:
 
-  Female();
+  Male();
 
  private:
 
-
+  
 };
 
 #endif

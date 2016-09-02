@@ -1,11 +1,14 @@
-#include "Female.h"
+#include "Male.h"
 
 #include <time.h>
 #include <random>
 
+
 using namespace std;
 
-Female::Female()
-{
 
+
+Male::Male()
+{
+  
 }
