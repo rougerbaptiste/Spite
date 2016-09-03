@@ -8,7 +8,9 @@ using namespace std;
 Male::Male()
 {
     m_life_exp = 40;
+    m_sperm_daily = 10;
     m_timeleft = rand()%m_life_exp +1 ;
+    m_sperm = rand()%100 +1;
 }
 
 // Functions
@@ -17,8 +19,18 @@ int Male::get_timeleft()
     return m_timeleft;
 }
 
+int Male::get_sperm()
+{
+    return m_sperm;
+}
+
+
 void Male::passing_day(){
     if (m_timeleft > 0) {
         m_timeleft--;
+        m_sperm += m_sperm_daily;
+        if (m_sperm > 100) {
+            m_sperm = 100;
+        }
     }
 }
