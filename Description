@@ -22,11 +22,17 @@
 #   In Male.h
 ####
     int m_timeleft : number of simulation cycles the male will last
+    int m_sperm_daily : percentile of sperm added daily
     int m_life_exp : life expextancy of the male
+    int m_sperm : percentile of repletion of the male
 
     ####
 
     int get_timeleft() : function to get how much time the male has left
 
+    int get_sperm() : function to get how much sperm the male has
+
     int passing_day() : function to make the day pass
-        already implemented : timeleft decreasing
+        already implemented :
+            timeleft decreasing
+            repletion of sperm
