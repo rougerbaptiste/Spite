@@ -16,3 +16,9 @@ int Male::get_timeleft()
 {
     return m_timeleft;
 }
+
+void Male::passing_day(){
+    if (m_timeleft > 0) {
+        m_timeleft--;
+    }
+}

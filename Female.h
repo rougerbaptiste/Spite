@@ -11,6 +11,7 @@ public:
 
     Female();
     int get_timeleft();
+    void passing_day();
 
 private:
     int m_timeleft;

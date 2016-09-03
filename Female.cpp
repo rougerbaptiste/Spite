@@ -19,3 +19,10 @@ int Female::get_timeleft()
 {
     return m_timeleft;
 }
+
+void Female::passing_day()
+{
+    if (m_timeleft > 0) {
+        m_timeleft--;
+    }
+}

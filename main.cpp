@@ -10,8 +10,9 @@ using namespace std;
 
 int main()
 {
+    srand (time(NULL));
 
-    int day_length (100);
+    int day_length (40);
 
     Female test;
     Male test2;
@@ -24,6 +25,8 @@ int main()
 
 
 
+        test.passing_day();
+        test2.passing_day();
         i++;
     }
 
