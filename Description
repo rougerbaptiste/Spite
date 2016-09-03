@@ -14,9 +14,19 @@
 
     int get_timeleft() : function to get how much time the female has left
 
+    int passing_day() : function to make the day pass
+        already implemented : timeleft decreasing
+
 
 ######
 #   In Male.h
 ####
     int m_timeleft : number of simulation cycles the male will last
     int m_life_exp : life expextancy of the male
+
+    ####
+
+    int get_timeleft() : function to get how much time the male has left
+
+    int passing_day() : function to make the day pass
+        already implemented : timeleft decreasing
