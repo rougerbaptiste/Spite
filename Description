@@ -1,0 +1,22 @@
+######
+#   In main.cpp
+####
+    int day_length : number of simulation cycles
+
+
+######
+#   In Female.h
+####
+    int m_timeleft : number of simulation cycles the female will last
+    int m_life_exp : life expectancy of the female
+
+    ####
+
+    int get_timeleft() : function to get how much time the female has left
+
+
+######
+#   In Male.h
+####
+    int m_timeleft : number of simulation cycles the male will last
+    int m_life_exp : life expextancy of the male

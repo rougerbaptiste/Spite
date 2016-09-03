@@ -10,9 +10,11 @@ class Male
 public:
 
     Male();
+    int get_timeleft();
 
 private:
-
+    int m_timeleft;
+    int m_life_exp;
 
 };
 
