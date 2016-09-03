@@ -7,11 +7,11 @@
 class Female
 {
 
- public:
+public:
 
-  Female();
+    Female();
 
- private:
+private:
 
 
 };

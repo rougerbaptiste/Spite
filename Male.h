@@ -7,13 +7,13 @@
 class Male
 {
 
- public:
+public:
 
-  Male();
+    Male();
 
- private:
+private:
 
-  
+
 };
 
 #endif
