@@ -8,8 +8,10 @@ using namespace std;
 Female::Female()
 {
 
-    m_life_exp = 40;
-    m_timeleft = rand()%m_life_exp +1 ;
+    m_lifeExp = 40;
+    m_timeleft = rand()%m_lifeExp +1 ;
+    m_maxCycle = 10;
+    m_cycle = rand()%m_maxCycle +1;
 
 
 }
@@ -20,9 +22,18 @@ int Female::get_timeleft()
     return m_timeleft;
 }
 
+int Female::get_cycle()
+{
+    return m_cycle;
+}
+
 void Female::passing_day()
 {
     if (m_timeleft > 0) {
         m_timeleft--;
+        m_cycle--;
+        if(m_cycle < 0){
+            m_cycle = m_maxCycle;
+        }
     }
 }

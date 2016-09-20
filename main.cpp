@@ -19,8 +19,9 @@ int main()
     int i (0);
     while (i < day_length) {
 
-        cout << "Male : " << test2.get_timeleft() << endl;
-        cout << "Sperm : " << test2.get_sperm() << endl << endl;
+        cout << "Female : " << test.get_timeleft() << endl;
+        cout << "Cycle : " << test.get_cycle() << endl << endl;
+
 
 
         test.passing_day();
