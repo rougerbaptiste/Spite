@@ -11,15 +11,23 @@ public:
 
     Male();
     int get_timeleft();
+
     int get_sperm();
+
+    int get_partner();
+    void set_partner(int i);
+
     void passing_day();
 
 
 private:
     int m_life_exp;
-    int m_sperm_daily;
     int m_timeleft;
+
+    int m_sperm_daily;
     int m_sperm;
+
+    int m_partner;
 
 };
 

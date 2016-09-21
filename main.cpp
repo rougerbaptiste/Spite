@@ -21,9 +21,13 @@ int main()
     Male males [maleNumber];
 
 
-    int i (0), day(0);
+    int i (0), i2(0), day(0);
     while (day < day_length) {
 
+
+        ///////
+        // Finding the dead individuals
+        //
         vector<int> deadMales;
         for (i=0; i < maleNumber; i++){ // allows to determine the number of dead males and their index
             if(males[i].get_timeleft() <= 0){
@@ -39,7 +43,19 @@ int main()
         }
 
 
-        cout << deadFemales.size() << endl;
+        ////////
+        // Pairing the individuals
+        //
+        for (i = 0; i < maleNumber; i++){
+            if(males[i].get_partner() < 0){
+                for(i2 = 0; i2 < femaleNumber; i2++){
+                    if(females[i].get_partner() < 0){
+                        males[i].set_partner(i2);
+                        females[i].set_partner(i);
+                    }
+                }
+            }
+        }
 
 
 

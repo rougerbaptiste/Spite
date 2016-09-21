@@ -13,6 +13,9 @@ public:
     int get_timeleft();
     int get_cycle();
 
+    int get_partner();
+    void set_partner(int i);
+
     void passing_day();
 
 private:
@@ -21,6 +24,8 @@ private:
 
     int m_maxCycle;
     int m_cycle;
+
+    int m_partner;
 
 
 };

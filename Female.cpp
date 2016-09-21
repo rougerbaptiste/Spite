@@ -10,9 +10,11 @@ Female::Female()
 
     m_lifeExp = 40;
     m_timeleft = rand()%m_lifeExp +1 ;
+
     m_maxCycle = 10;
     m_cycle = rand()%m_maxCycle +1;
 
+    m_partner = -1;
 
 }
 
@@ -26,6 +28,17 @@ int Female::get_cycle()
 {
     return m_cycle;
 }
+
+int Female::get_partner()
+{
+    return m_partner;
+}
+
+void Female::set_partner(int i)
+{
+    m_partner = i;
+}
+
 
 void Female::passing_day()
 {

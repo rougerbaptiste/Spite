@@ -8,9 +8,12 @@ using namespace std;
 Male::Male()
 {
     m_life_exp = 40;
-    m_sperm_daily = 10;
     m_timeleft = rand()%m_life_exp +1 ;
+
+    m_sperm_daily = 10;
     m_sperm = rand()%100 +1;
+
+    m_partner = -1;
 }
 
 // Functions
@@ -22,6 +25,16 @@ int Male::get_timeleft()
 int Male::get_sperm()
 {
     return m_sperm;
+}
+
+int Male::get_partner()
+{
+    return m_partner;
+}
+
+void Male::set_partner(int i)
+{
+    m_partner = i;
 }
 
 
