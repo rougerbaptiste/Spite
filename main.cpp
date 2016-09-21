@@ -12,21 +12,36 @@ int main()
 {
     srand (time(NULL));
 
-    int day_length (40);
-
-    Female test;
-    Male test2;
-    int i (0);
-    while (i < day_length) {
-
-        cout << "Female : " << test.get_timeleft() << endl;
-        cout << "Cycle : " << test.get_cycle() << endl << endl;
+    int const day_length (40);
+    int const maleNumber (10);
+    int const femaleNumber (10);
 
 
+    Female females [femaleNumber];
+    Male males [maleNumber];
 
-        test.passing_day();
-        test2.passing_day();
-        i++;
+
+    int i (0), day(0);
+    while (day < day_length) {
+
+        vector<int> deadMales;
+        for (i=0; i < maleNumber; i++){
+            if(males[i].get_timeleft() <= 0){
+                deadMales.push_back(i);
+            }
+        }
+
+        cout << deadMales.size() << endl;
+
+        for(i = 0; i < maleNumber; i++){
+            males[i].passing_day();
+        }
+        for(i = 0; i < femaleNumber; i++){
+            females[i].passing_day();
+        }
+
+
+        day++;
     }
 
     return 0;
