@@ -10,65 +10,75 @@ using namespace std;
 
 int main()
 {
-    srand (time(NULL));
+        srand (time(NULL));
 
-    int const day_length (40);
-    int const maleNumber (10);
-    int const femaleNumber (10);
-
-
-    Female females [femaleNumber];
-    Male males [maleNumber];
+        int const day_length (40);
+        int const maleNumber (10);
+        int const femaleNumber (10);
 
 
-    int i (0), i2(0), day(0);
-    while (day < day_length) {
+        Female females [femaleNumber];
+        Male males [maleNumber];
 
 
-        ///////
-        // Finding the dead individuals
-        //
-        vector<int> deadMales;
-        for (i=0; i < maleNumber; i++){ // allows to determine the number of dead males and their index
-            if(males[i].get_timeleft() <= 0){
-                deadMales.push_back(i);
-            }
-        }
-
-        vector<int> deadFemales;
-        for (i=0; i < femaleNumber; i++){ // allows to determine the number of dead females and their index
-            if(females[i].get_timeleft() <= 0){
-                deadFemales.push_back(i);
-            }
-        }
+        int i (0), i2(0), day(0);
+        while (day < day_length) {
 
 
-        ////////
-        // Pairing the individuals
-        //
-        for (i = 0; i < maleNumber; i++){
-            if(males[i].get_partner() < 0){
-                for(i2 = 0; i2 < femaleNumber; i2++){
-                    if(females[i].get_partner() < 0){
-                        males[i].set_partner(i2);
-                        females[i].set_partner(i);
-                    }
+                ///////
+                // Finding the dead individuals
+                //
+                vector<int> deadMales;
+                for (i=0; i < maleNumber; i++){ // allows to determine the number of dead males and their index
+                        if(males[i].get_timeleft() <= 0){
+                                deadMales.push_back(i);
+                        }
                 }
-            }
+
+                vector<int> deadFemales;
+                for (i=0; i < femaleNumber; i++){ // allows to determine the number of dead females and their index
+                        if(females[i].get_timeleft() <= 0){
+                                deadFemales.push_back(i);
+                        }
+                }
+
+
+                ////////
+                // Pairing the individuals
+                //
+                for (i = 0; i < maleNumber; i++){
+                        if(males[i].get_partner() < 0){
+                                for(i2 = 0; i2 < femaleNumber; i2++){
+                                        if(females[i].get_partner() < 0){
+                                                males[i].set_partner(i2);
+                                                females[i].set_partner(i);
+                                        }
+                                }
+                        }
+                }
+
+
+                ////////
+                // Mating the individuals
+                //
+
+                for (i = 0; i < femaleNumber; i++){
+                        if( females[i].get_cycle() == 100 && females[i].get_partner() != 0 ){
+                                
+                        }
+                }
+
+
+                for(i = 0; i < maleNumber; i++){
+                        males[i].passing_day();
+                }
+                for(i = 0; i < femaleNumber; i++){
+                        females[i].passing_day();
+                }
+
+
+                day++;
         }
 
-
-
-        for(i = 0; i < maleNumber; i++){
-            males[i].passing_day();
-        }
-        for(i = 0; i < femaleNumber; i++){
-            females[i].passing_day();
-        }
-
-
-        day++;
-    }
-
-    return 0;
+        return 0;
 }

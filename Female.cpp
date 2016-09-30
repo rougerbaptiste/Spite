@@ -16,6 +16,10 @@ Female::Female()
 
     m_partner = -1;
 
+    m_spitePartner = false;
+
+    m_gestating = false;
+    m_gestation = 0;
 }
 
 // Functions
