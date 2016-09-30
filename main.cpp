@@ -42,6 +42,15 @@ int main()
                         }
                 }
 
+                ////////
+                // Applying death of individuals
+                //
+
+                for (i=0; i < deadMales.size(); i++){
+                        females[males[i].get_partner()].set_partner(-1);;
+                        males[i].set_partner(-1);
+                }
+
 
                 ////////
                 // Pairing the individuals
