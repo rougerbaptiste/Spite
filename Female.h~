@@ -17,7 +17,7 @@ public:
     void set_partner(int i);
 
     bool get_gestating();
-    int get_gestation();
+    bool get_gestation();
 
     void set_gestating();
     void set_spitePartner(bool spite);

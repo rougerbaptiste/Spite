@@ -19,7 +19,7 @@ public:
 
     void passing_day();
     
-    bool get_spite();
+    void get_spite();
 
 private:
     int m_life_exp;

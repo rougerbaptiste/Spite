@@ -51,7 +51,7 @@ bool Female::get_gestating()
     return m_gestating;
 }
 
-int Female::get_gestation()
+int Female ::get_gestation()
 {
     return m_gestation;
 }

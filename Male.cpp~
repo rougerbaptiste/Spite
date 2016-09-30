@@ -38,7 +38,7 @@ void Male::set_partner(int i)
     m_partner = i;
 }
 
-bool Male::get_spite()
+void Male::get_spite()
 {
     return m_spite;
 }
