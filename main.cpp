@@ -46,9 +46,14 @@ int main()
                 // Applying death of individuals
                 //
 
-                for (i=0; i < deadMales.size(); i++){
-                        females[males[i].get_partner()].set_partner(-1);;
+                for (i=0; i < int(deadMales.size()); i++){
+                        females[males[i].get_partner()].set_partner(-1);
                         males[i].set_partner(-1);
+                }
+
+                for (i = 0; i < int(deadFemales.size()); i++){
+                        males[females[i].get_partner()].set_partner(-1);
+                        females[i].set_partner(-1);
                 }
 
 
@@ -85,9 +90,9 @@ int main()
                         females[i].passing_day();
                 }
 
-                cout << day << endl;
                 day++;
         }
 
+        cout << day << endl;
         return 0;
 }
