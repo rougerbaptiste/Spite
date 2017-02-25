@@ -33,7 +33,7 @@ private:
     int m_cycle;
 
     int m_partner;
-    
+
     bool m_spitePartner;
 
     bool m_birthReady;

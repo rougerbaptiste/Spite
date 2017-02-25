@@ -77,18 +77,17 @@ void Female::passing_day()
         if(m_cycle < 0){
             m_cycle = m_maxCycle;
         }
-    if (m_gestating == true){
-        m_gestation += 10;
+        if (m_gestating == true){
+            m_gestation += 10;
 
-        if (m_gestation >=100){
-            m_birthReady = true;
+            if (m_gestation >=100){
+                m_birthReady = true;
+            }
+            if (m_gestation >200){
+                m_gestating = false;
+                m_gestation = 0;
+                m_birthReady = false;
+            }
         }
-        if (m_gestation >200){
-            m_gestating = false;
-            m_gestation = 0;
-            m_birthReady = false;
-        }
-    }
-    
     }
 }

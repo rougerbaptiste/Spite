@@ -18,7 +18,7 @@ public:
     void set_partner(int i);
 
     void passing_day();
-    
+
     bool get_spite();
 
 private:
